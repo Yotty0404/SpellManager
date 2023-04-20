@@ -229,6 +229,7 @@ namespace SpellManager
             // 
             this.picS3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picS3.BackgroundImage")));
             this.picS3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picS3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picS3.Location = new System.Drawing.Point(38, 87);
             this.picS3.Name = "picS3";
             this.picS3.Size = new System.Drawing.Size(32, 32);
