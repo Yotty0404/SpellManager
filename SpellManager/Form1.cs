@@ -133,33 +133,39 @@ namespace SpellManager
             timer.Start();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             StartTimer(lblS1, timer1);
         }
 
-        private void picS2_Click(object sender, EventArgs e)
+        private void picS2_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             StartTimer(lblS2, timer2);
         }
 
-        private void picS3_Click(object sender, EventArgs e)
+        private void picS3_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             StartTimer(lblS3, timer3);
         }
 
-        private void picS4_Click(object sender, EventArgs e)
+        private void picS4_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             StartTimer(lblS4, timer4);
         }
 
-        private void picS5_Click(object sender, EventArgs e)
+        private void picS5_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             StartTimer(lblS5, timer5);
         }
 
-        private void picReset_Click(object sender, EventArgs e)
+        private void picReset_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             lblS1.Visible = false;
             timer1.Stop();
             lblS2.Visible = false;
@@ -172,62 +178,72 @@ namespace SpellManager
             timer5.Stop();
         }
 
-        private void picS1Up_Click(object sender, EventArgs e)
+        private void picS1Up_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             var time = DateTime.Parse("0:" + lblS1.Text).AddSeconds(5);
             lblS1.Text = time.ToString("m:ss");
         }
 
-        private void picS1Down_Click(object sender, EventArgs e)
+        private void picS1Down_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             var time = DateTime.Parse("0:" + lblS1.Text).AddSeconds(-5);
             lblS1.Text = time.ToString("m:ss");
         }
 
-        private void picS2Up_Click(object sender, EventArgs e)
+        private void picS2Up_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             var time = DateTime.Parse("0:" + lblS2.Text).AddSeconds(5);
             lblS2.Text = time.ToString("m:ss");
         }
 
-        private void picS2Down_Click(object sender, EventArgs e)
+        private void picS2Down_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             var time = DateTime.Parse("0:" + lblS2.Text).AddSeconds(-5);
             lblS2.Text = time.ToString("m:ss");
         }
 
-        private void picS3Up_Click(object sender, EventArgs e)
+        private void picS3Up_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             var time = DateTime.Parse("0:" + lblS3.Text).AddSeconds(5);
             lblS3.Text = time.ToString("m:ss");
         }
 
-        private void picS3Down_Click(object sender, EventArgs e)
+        private void picS3Down_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             var time = DateTime.Parse("0:" + lblS3.Text).AddSeconds(-5);
             lblS3.Text = time.ToString("m:ss");
         }
 
-        private void picS4Up_Click(object sender, EventArgs e)
+        private void picS4Up_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             var time = DateTime.Parse("0:" + lblS4.Text).AddSeconds(5);
             lblS4.Text = time.ToString("m:ss");
         }
 
-        private void picS4Down_Click(object sender, EventArgs e)
+        private void picS4Down_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             var time = DateTime.Parse("0:" + lblS4.Text).AddSeconds(-5);
             lblS4.Text = time.ToString("m:ss");
         }
 
-        private void picS5Up_Click(object sender, EventArgs e)
+        private void picS5Up_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             var time = DateTime.Parse("0:" + lblS5.Text).AddSeconds(5);
             lblS5.Text = time.ToString("m:ss");
         }
 
-        private void picS5Down_Click(object sender, EventArgs e)
+        private void picS5Down_Click(object sender, MouseEventArgs e)
         {
+            if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             var time = DateTime.Parse("0:" + lblS5.Text).AddSeconds(-5);
             lblS5.Text = time.ToString("m:ss");
         }

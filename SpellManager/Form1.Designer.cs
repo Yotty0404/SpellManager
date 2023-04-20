@@ -211,7 +211,7 @@ namespace SpellManager
             this.picS1.Size = new System.Drawing.Size(32, 32);
             this.picS1.TabIndex = 15;
             this.picS1.TabStop = false;
-            this.picS1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.picS1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_Click);
             // 
             // picS2
             // 
@@ -223,7 +223,7 @@ namespace SpellManager
             this.picS2.Size = new System.Drawing.Size(32, 32);
             this.picS2.TabIndex = 16;
             this.picS2.TabStop = false;
-            this.picS2.Click += new System.EventHandler(this.picS2_Click);
+            this.picS2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS2_Click);
             // 
             // picS3
             // 
@@ -234,7 +234,7 @@ namespace SpellManager
             this.picS3.Size = new System.Drawing.Size(32, 32);
             this.picS3.TabIndex = 17;
             this.picS3.TabStop = false;
-            this.picS3.Click += new System.EventHandler(this.picS3_Click);
+            this.picS3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS3_Click);
             // 
             // picS4
             // 
@@ -246,7 +246,7 @@ namespace SpellManager
             this.picS4.Size = new System.Drawing.Size(32, 32);
             this.picS4.TabIndex = 18;
             this.picS4.TabStop = false;
-            this.picS4.Click += new System.EventHandler(this.picS4_Click);
+            this.picS4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS4_Click);
             // 
             // picS5
             // 
@@ -258,7 +258,7 @@ namespace SpellManager
             this.picS5.Size = new System.Drawing.Size(32, 32);
             this.picS5.TabIndex = 19;
             this.picS5.TabStop = false;
-            this.picS5.Click += new System.EventHandler(this.picS5_Click);
+            this.picS5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS5_Click);
             // 
             // picReset
             // 
@@ -270,7 +270,7 @@ namespace SpellManager
             this.picReset.Size = new System.Drawing.Size(32, 32);
             this.picReset.TabIndex = 20;
             this.picReset.TabStop = false;
-            this.picReset.Click += new System.EventHandler(this.picReset_Click);
+            this.picReset.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picReset_Click);
             // 
             // picS1Down
             // 
@@ -282,8 +282,8 @@ namespace SpellManager
             this.picS1Down.Size = new System.Drawing.Size(20, 20);
             this.picS1Down.TabIndex = 21;
             this.picS1Down.TabStop = false;
-            this.picS1Down.Click += new System.EventHandler(this.picS1Down_Click);
-            this.picS1Down.DoubleClick += new System.EventHandler(this.picS1Down_Click);
+            this.picS1Down.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS1Down_Click);
+            this.picS1Down.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.picS1Down_Click);
             // 
             // picS1Up
             // 
@@ -295,8 +295,8 @@ namespace SpellManager
             this.picS1Up.Size = new System.Drawing.Size(20, 20);
             this.picS1Up.TabIndex = 22;
             this.picS1Up.TabStop = false;
-            this.picS1Up.Click += new System.EventHandler(this.picS1Up_Click);
-            this.picS1Up.DoubleClick += new System.EventHandler(this.picS1Up_Click);
+            this.picS1Up.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS1Up_Click);
+            this.picS1Up.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.picS1Up_Click);
             // 
             // pictureBox1
             // 
@@ -308,8 +308,8 @@ namespace SpellManager
             this.pictureBox1.Size = new System.Drawing.Size(20, 20);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.picS2Up_Click);
-            this.pictureBox1.DoubleClick += new System.EventHandler(this.picS2Up_Click);
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS2Up_Click);
+            this.pictureBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.picS2Up_Click);
             // 
             // pictureBox2
             // 
@@ -321,8 +321,8 @@ namespace SpellManager
             this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.picS3Up_Click);
-            this.pictureBox2.DoubleClick += new System.EventHandler(this.picS3Up_Click);
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS3Up_Click);
+            this.pictureBox2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.picS3Up_Click);
             // 
             // pictureBox3
             // 
@@ -334,8 +334,8 @@ namespace SpellManager
             this.pictureBox3.Size = new System.Drawing.Size(20, 20);
             this.pictureBox3.TabIndex = 25;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.picS4Up_Click);
-            this.pictureBox3.DoubleClick += new System.EventHandler(this.picS4Up_Click);
+            this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS4Up_Click);
+            this.pictureBox3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.picS4Up_Click);
             // 
             // pictureBox4
             // 
@@ -347,8 +347,8 @@ namespace SpellManager
             this.pictureBox4.Size = new System.Drawing.Size(20, 20);
             this.pictureBox4.TabIndex = 26;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.picS5Up_Click);
-            this.pictureBox4.DoubleClick += new System.EventHandler(this.picS5Up_Click);
+            this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS5Up_Click);
+            this.pictureBox4.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.picS5Up_Click);
             // 
             // pictureBox5
             // 
@@ -360,8 +360,8 @@ namespace SpellManager
             this.pictureBox5.Size = new System.Drawing.Size(20, 20);
             this.pictureBox5.TabIndex = 27;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.picS2Down_Click);
-            this.pictureBox5.DoubleClick += new System.EventHandler(this.picS2Down_Click);
+            this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS2Down_Click);
+            this.pictureBox5.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.picS2Down_Click);
             // 
             // pictureBox6
             // 
@@ -373,8 +373,8 @@ namespace SpellManager
             this.pictureBox6.Size = new System.Drawing.Size(20, 20);
             this.pictureBox6.TabIndex = 28;
             this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.picS3Down_Click);
-            this.pictureBox6.DoubleClick += new System.EventHandler(this.picS3Down_Click);
+            this.pictureBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS3Down_Click);
+            this.pictureBox6.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.picS3Down_Click);
             // 
             // pictureBox7
             // 
@@ -386,8 +386,8 @@ namespace SpellManager
             this.pictureBox7.Size = new System.Drawing.Size(20, 20);
             this.pictureBox7.TabIndex = 29;
             this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.picS4Down_Click);
-            this.pictureBox7.DoubleClick += new System.EventHandler(this.picS4Down_Click);
+            this.pictureBox7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS4Down_Click);
+            this.pictureBox7.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.picS4Down_Click);
             // 
             // pictureBox8
             // 
@@ -399,8 +399,8 @@ namespace SpellManager
             this.pictureBox8.Size = new System.Drawing.Size(20, 20);
             this.pictureBox8.TabIndex = 30;
             this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.picS5Down_Click);
-            this.pictureBox8.DoubleClick += new System.EventHandler(this.picS5Down_Click);
+            this.pictureBox8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS5Down_Click);
+            this.pictureBox8.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.picS5Down_Click);
             // 
             // Form1
             // 
