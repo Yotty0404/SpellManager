@@ -266,7 +266,7 @@ namespace SpellManager
             this.picReset.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picReset.BackgroundImage")));
             this.picReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picReset.Location = new System.Drawing.Point(28, 212);
+            this.picReset.Location = new System.Drawing.Point(33, 206);
             this.picReset.Name = "picReset";
             this.picReset.Size = new System.Drawing.Size(32, 32);
             this.picReset.TabIndex = 20;
@@ -407,7 +407,7 @@ namespace SpellManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(120, 256);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
