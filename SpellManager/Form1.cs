@@ -1,22 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System;
-using System.IO;
-using System.Timers;
 using Timer = System.Timers.Timer;
-using System.Threading;
 
 namespace SpellManager
 {
     public partial class Form1 : Form
     {
+        //キーボードフッククラスのインスタンス生成
+        KeyboardHook _hook = new KeyboardHook();
+
         //マウスのクリック位置を記憶
         private Point mousePoint;
         private Timer timer1 = new Timer(1000);
@@ -25,6 +18,9 @@ namespace SpellManager
         private Timer timer4 = new Timer(1000);
         private Timer timer5 = new Timer(1000);
 
+        private bool PressingShiftKey = false;
+        private bool PressingControlKey = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -32,6 +28,7 @@ namespace SpellManager
             this.Opacity = 0.6;
             this.MinimumSize = new Size(0, 0);
             this.Size = new Size(96, 240);
+            this.KeyPreview = true;
 
             int radius = 4;
             int diameter = radius * 2;
@@ -246,6 +243,95 @@ namespace SpellManager
             if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
             var time = DateTime.Parse("0:" + lblS5.Text).AddSeconds(-5);
             lblS5.Text = time.ToString("m:ss");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //キーボードが押された時のイベントハンドラを登録
+            _hook.OnKeyDown += (s, ea) =>
+            {
+                ea.RetCode = 1;
+
+                switch (ea.Key)
+                {
+                    case Keys.F8:
+                        PressedFunctionKey(lblS1, timer1);
+                        break;
+                    case Keys.F9:
+                        PressedFunctionKey(lblS2, timer2);
+                        break;
+                    case Keys.F10:
+                        PressedFunctionKey(lblS3, timer3);
+                        break;
+                    case Keys.F11:
+                        PressedFunctionKey(lblS4, timer4);
+                        break;
+                    case Keys.F12:
+                        PressedFunctionKey(lblS5, timer5);
+                        break;
+                    case Keys.LShiftKey:
+                    case Keys.RShiftKey:
+                        PressingShiftKey = true;
+                        ea.RetCode = 0;
+                        break;
+                    case Keys.LControlKey:
+                    case Keys.RControlKey:
+                        PressingControlKey = true;
+                        ea.RetCode = 0;
+                        break;
+                    default:
+                        ea.RetCode = 0;
+                        break;
+                }
+            };
+
+            _hook.OnKeyUp += (s, ea) =>
+            {
+                if (ea.Key == Keys.LShiftKey || ea.Key == Keys.RShiftKey)
+                {
+                    PressingShiftKey = false;
+                }
+                else if (ea.Key == Keys.LControlKey || ea.Key == Keys.RControlKey)
+                {
+                    PressingControlKey = false;
+                }
+            };
+
+            //キーボードフックの開始
+            _hook.Hook();
+        }
+
+        private void PressedFunctionKey(Label lbl, Timer timer)
+        {
+            if (lbl.Visible)
+            {
+                if (PressingControlKey)
+                {
+                    lbl.Visible = false;
+                    timer.Stop();
+                }
+                else if (PressingShiftKey)
+                {
+                    var time = DateTime.Parse("0:" + lbl.Text).AddSeconds(5);
+                    lbl.Text = time.ToString("m:ss");
+                }
+                else
+                {
+                    var time = DateTime.Parse("0:" + lbl.Text).AddSeconds(-5);
+                    lbl.Text = time.ToString("m:ss");
+                }
+            }
+            else
+            {
+                if (PressingControlKey) return;
+                StartTimer(lbl, timer);
+            }
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //キーボードフックの終了
+            _hook.UnHook();
         }
     }
 }
