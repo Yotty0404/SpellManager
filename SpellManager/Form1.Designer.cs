@@ -29,6 +29,7 @@ namespace SpellManager
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.capS1 = new System.Windows.Forms.Label();
             this.lblS1 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@ namespace SpellManager
             this.picS3 = new System.Windows.Forms.PictureBox();
             this.picS4 = new System.Windows.Forms.PictureBox();
             this.picS5 = new System.Windows.Forms.PictureBox();
-            this.picReset = new System.Windows.Forms.PictureBox();
             this.picS1Down = new System.Windows.Forms.PictureBox();
             this.picS1Up = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -56,12 +56,14 @@ namespace SpellManager
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.閉じるToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.リセットToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.picS1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picS2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picS3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picS4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picS5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picS1Down)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picS1Up)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +74,7 @@ namespace SpellManager
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // capS1
@@ -85,6 +88,8 @@ namespace SpellManager
             this.capS1.TabIndex = 2;
             this.capS1.Text = "TOP";
             this.capS1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.capS1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.capS1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lblS1
             // 
@@ -124,6 +129,8 @@ namespace SpellManager
             this.label2.TabIndex = 5;
             this.label2.Text = "JG";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lblS3
             // 
@@ -150,6 +157,8 @@ namespace SpellManager
             this.label3.TabIndex = 8;
             this.label3.Text = "MID";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lblS4
             // 
@@ -175,6 +184,8 @@ namespace SpellManager
             this.label4.TabIndex = 11;
             this.label4.Text = "ADC";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lblS5
             // 
@@ -200,6 +211,8 @@ namespace SpellManager
             this.label5.TabIndex = 14;
             this.label5.Text = "SUP";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // picS1
             // 
@@ -260,18 +273,6 @@ namespace SpellManager
             this.picS5.TabIndex = 19;
             this.picS5.TabStop = false;
             this.picS5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS5_Click);
-            // 
-            // picReset
-            // 
-            this.picReset.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picReset.BackgroundImage")));
-            this.picReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picReset.Location = new System.Drawing.Point(33, 206);
-            this.picReset.Name = "picReset";
-            this.picReset.Size = new System.Drawing.Size(32, 32);
-            this.picReset.TabIndex = 20;
-            this.picReset.TabStop = false;
-            this.picReset.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picReset_Click);
             // 
             // picS1Down
             // 
@@ -403,12 +404,35 @@ namespace SpellManager
             this.pictureBox8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picS5Down_Click);
             this.pictureBox8.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.picS5Down_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.リセットToolStripMenuItem,
+            this.閉じるToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(109, 48);
+            // 
+            // 閉じるToolStripMenuItem
+            // 
+            this.閉じるToolStripMenuItem.Name = "閉じるToolStripMenuItem";
+            this.閉じるToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.閉じるToolStripMenuItem.Text = "閉じる";
+            this.閉じるToolStripMenuItem.Click += new System.EventHandler(this.閉じるToolStripMenuItem_Click);
+            // 
+            // リセットToolStripMenuItem
+            // 
+            this.リセットToolStripMenuItem.Name = "リセットToolStripMenuItem";
+            this.リセットToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.リセットToolStripMenuItem.Text = "リセット";
+            this.リセットToolStripMenuItem.Click += new System.EventHandler(this.リセットToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(120, 256);
+            this.ClientSize = new System.Drawing.Size(120, 211);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
@@ -419,7 +443,6 @@ namespace SpellManager
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picS1Up);
             this.Controls.Add(this.picS1Down);
-            this.Controls.Add(this.picReset);
             this.Controls.Add(this.picS5);
             this.Controls.Add(this.picS4);
             this.Controls.Add(this.picS3);
@@ -448,7 +471,6 @@ namespace SpellManager
             ((System.ComponentModel.ISupportInitialize)(this.picS3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picS4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picS5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picS1Down)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picS1Up)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -459,6 +481,7 @@ namespace SpellManager
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,7 +503,6 @@ namespace SpellManager
         private System.Windows.Forms.PictureBox picS3;
         private System.Windows.Forms.PictureBox picS4;
         private System.Windows.Forms.PictureBox picS5;
-        private System.Windows.Forms.PictureBox picReset;
         private System.Windows.Forms.PictureBox picS1Down;
         private System.Windows.Forms.PictureBox picS1Up;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -491,6 +513,9 @@ namespace SpellManager
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 閉じるToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem リセットToolStripMenuItem;
     }
 }
 

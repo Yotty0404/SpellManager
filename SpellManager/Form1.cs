@@ -27,7 +27,7 @@ namespace SpellManager
             this.FormBorderStyle = FormBorderStyle.None;
             this.Opacity = 0.6;
             this.MinimumSize = new Size(0, 0);
-            this.Size = new Size(96, 240);
+            this.Size = new Size(96, 206);
             this.KeyPreview = true;
 
             int radius = 4;
@@ -163,16 +163,6 @@ namespace SpellManager
         private void picReset_Click(object sender, MouseEventArgs e)
         {
             if ((e.Button & MouseButtons.Left) != MouseButtons.Left) return;
-            lblS1.Visible = false;
-            timer1.Stop();
-            lblS2.Visible = false;
-            timer2.Stop();
-            lblS3.Visible = false;
-            timer3.Stop();
-            lblS4.Visible = false;
-            timer4.Stop();
-            lblS5.Visible = false;
-            timer5.Stop();
         }
 
         private void picS1Up_Click(object sender, MouseEventArgs e)
@@ -332,6 +322,25 @@ namespace SpellManager
         {
             //キーボードフックの終了
             _hook.UnHook();
+        }
+
+        private void 閉じるToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void リセットToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblS1.Visible = false;
+            timer1.Stop();
+            lblS2.Visible = false;
+            timer2.Stop();
+            lblS3.Visible = false;
+            timer3.Stop();
+            lblS4.Visible = false;
+            timer4.Stop();
+            lblS5.Visible = false;
+            timer5.Stop();
         }
     }
 }

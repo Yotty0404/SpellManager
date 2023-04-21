@@ -553,17 +553,6 @@
         hTcAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="picReset.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAATZJREFUaEPt18FRwzAQBVCXQimUQieUDoE8MrMjx1grKYlm9G7o737Jt7Aty7Is
-        L+PrJONHPoz+zL5fjwZyV4qKQHTjuD/9zdTdOL5x3JfurlSP/wC9Q+z1/17ai85DRncZqWK1nb5dRk6z
-        doqVNroK4hQV/zKep6cgbqbuLmN5egJRL29qd5nJ0VEQV7FazXqOjkBUxWqKinr2C+IqVlNU1LMfiKpZ
-        T1FRz34gSlFRxWqOjkA0B28ORHPw5kA0B28ORHPw5kA0B28ORHPw5oJ4hPCb6PL35/W4ga5A1J36QJSn
-        pyDuRm1B3EZXIOpGbSBqp68gbqauIO5DZ0GcpqYg7qrbf01W7jI2xOFH/DFbEB8yOtSpj8jQ/xju7Ebt
-        Y7m7mbrn8Y5q1l+Ltx0yuizLsjzbtn0D1pq+ZZkJf10AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="picS1Down.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -654,6 +643,9 @@
         Y0wvJwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
