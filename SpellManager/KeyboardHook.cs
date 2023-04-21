@@ -1,4 +1,9 @@
-﻿using System;
+﻿//
+//以下URLより引用
+//https://resanaplaza.com/2022/12/31/%E3%80%90%E3%82%B3%E3%83%94%E3%83%9A%E3%81%A7%E4%BD%BF%E3%81%88%E3%82%8B%E3%80%91c%E3%81%8B%E3%82%89key-hook%E3%81%A7%E3%82%AD%E3%83%BC%E5%85%A5%E5%8A%9B%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/
+//
+
+using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
