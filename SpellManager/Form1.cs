@@ -25,7 +25,7 @@ namespace SpellManager
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
-            this.Opacity = 0.6;
+            this.Opacity = 0.8;
             this.MinimumSize = new Size(0, 0);
             this.Size = new Size(96, 206);
             this.KeyPreview = true;
